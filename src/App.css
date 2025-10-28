@@ -21,7 +21,7 @@ header {
 header h1 {
   font-size: 3rem;
   margin: 0 0 0.5rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--ctp-mauve) 0%, var(--ctp-pink) 50%, var(--ctp-blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -29,7 +29,7 @@ header h1 {
 
 header p {
   font-size: 1.1rem;
-  color: #888;
+  color: var(--ctp-subtext0);
   margin: 0;
 }
 
@@ -44,24 +44,24 @@ header p {
   grid-template-columns: 60px 1fr auto;
   gap: 1.5rem;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-surface1);
   border-radius: 12px;
   padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .proposal-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--ctp-surface1);
+  border-color: var(--ctp-surface2);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .rank {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #667eea;
+  color: var(--ctp-lavender);
   text-align: center;
 }
 
@@ -72,13 +72,13 @@ header p {
 .proposal-content h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--ctp-text);
 }
 
 .proposal-content p {
   margin: 0;
   font-size: 0.95rem;
-  color: #aaa;
+  color: var(--ctp-subtext0);
   line-height: 1.5;
 }
 
@@ -87,8 +87,9 @@ header p {
   align-items: center;
   gap: 0.75rem;
   padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--ctp-mantle);
   border-radius: 8px;
+  border: 1px solid var(--ctp-surface1);
 }
 
 .vote-btn {
@@ -114,27 +115,29 @@ header p {
 }
 
 .upvote {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--ctp-green);
+  color: var(--ctp-crust);
 }
 
 .upvote:hover {
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 16px rgba(166, 227, 161, 0.5);
+  filter: brightness(1.1);
 }
 
 .downvote {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  background: var(--ctp-red);
+  color: var(--ctp-crust);
 }
 
 .downvote:hover {
-  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+  box-shadow: 0 4px 16px rgba(243, 139, 168, 0.5);
+  filter: brightness(1.1);
 }
 
 .vote-count {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--ctp-text);
   min-width: 40px;
   text-align: center;
 }
